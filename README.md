@@ -1,10 +1,37 @@
+<div align="center">
+
 # 答案之书.skill
 
-有些问题，适合被分析；有些问题，却只适合在夜深灯静时，交给一句恰到好处的话。
+> 有些问题，适合被分析；有些问题，却只适合在夜深灯静时，交给一句恰到好处的话。
 
-《答案之书.skill》想做的，正是这样一件温柔而克制的事。它不替人做决定，不夸张地许诺命运，也不试图用冗长的解释掩盖犹疑本身。它只是从电影的光影、文学的章节与音乐的旋律里，轻轻翻出一句带着出处的回答，让提问者在某个瞬间，恰好与一句话相遇。
+![Skill](https://img.shields.io/badge/Skill-Book%20of%20Answers-black?style=flat-square)
+![Language](https://img.shields.io/badge/Language-zh--CN-1f3a5f?style=flat-square)
+![Mode](https://img.shields.io/badge/Mode-Movie%20%7C%20Literature%20%7C%20Music-5c4b8a?style=flat-square)
+![Output](https://img.shields.io/badge/Output-Cited%20Answer-7a5c3e?style=flat-square)
+![Storage](https://img.shields.io/badge/Memory-Minimal%20Local%20State-2f6f4f?style=flat-square)
 
-当你问它明天会不会更好、旅行会不会顺利、是否该远行、是否该放下，它不会像一台冷冰冰的问答机那样给出结论，而更像一位深夜仍为你留灯的馆员，从不同书架之间替你抽出一页，交到你手里。也许那不是标准答案，却往往会成为当下最像答案的那一句。
+<p align="center">
+  <a href="#概览">概览</a> ·
+  <a href="#功能特性">功能</a> ·
+  <a href="#快速开始">开始</a> ·
+  <a href="#示例指令">示例</a> ·
+  <a href="#存储说明">存储</a> ·
+  <a href="#响应格式">输出</a>
+</p>
+
+<p align="center">
+  把问题轻轻放下，让电影、文学与音乐为你翻出一句带出处的回答。
+</p>
+
+</div>
+
+---
+
+## 概览
+
+《答案之书.skill》想做的，并不是替人做决定，也不是用漂亮措辞伪装答案的缺席。它更像一位深夜仍为你留灯的馆员，在电影的光影、文学的章节与音乐的旋律之间，替你抽出一句恰好能够落在此刻心绪上的话。
+
+当你问它明天会不会更好、旅行会不会顺利、是否该远行、是否该放下，它不会像一台冷冰冰的问答机那样急着给出判断，而是从不同书架之间轻轻翻开一页，把一句带着出处的话交到你手里。也许那不是标准答案，却往往会成为当下最像答案的那一句。
 
 这是一个基于纯文本交互的对话技能项目。当前版本内置三本书：
 
@@ -13,10 +40,6 @@
 - `《音乐答案之书》`
 
 它会在三本书之间随机翻页，也允许使用者指定其中一本来提问；回答始终保留出处，并以尽量简洁、稳定、可分享的形式呈现。
-
-## 一句话简介
-
-把问题轻轻放下，让电影、文学与音乐为你翻出一句带出处的回答。
 
 ## 功能特性
 
@@ -44,7 +67,8 @@
 ## 快速开始
 
 ```bash
-cd /Users/shaozhaoru/Documents/book-of-answers-skill
+git clone https://github.com/Shaozrrr/book-of-answers-skill.git
+cd book-of-answers-skill
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
@@ -109,7 +133,7 @@ python3 -m unittest discover -s tests
 校验技能元数据：
 
 ```bash
-python3 /Users/shaozhaoru/.codex/skills/.system/skill-creator/scripts/quick_validate.py /Users/shaozhaoru/Documents/book-of-answers-skill
+python3 "$CODEX_HOME/skills/.system/skill-creator/scripts/quick_validate.py" "$(pwd)"
 ```
 
 ## 响应格式
